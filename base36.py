@@ -2,12 +2,14 @@
 # -*- coding: utf-8 -*-
 #+ Autor:	Ran#
 #+ Creado:	19/07/2019 23:31:19
-#+ Editado:	19/07/2019 23:43:19
+#+ Editado:	01/08/2019 13:37:50
 #------------------------------------------------------------------------------------------------
 import sys
 #------------------------------------------------------------------------------------------------
 def code(integer):
 	chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+	# por se meten un char
+	integer = int(integer)
 
 	sign = '-' if integer < 0 else ''
 	integer = abs(integer)
@@ -33,10 +35,10 @@ if __name__=="__main__":
 	if len(sys.argv)>1:
 		if sys.argv[1]=='-?':
 			print('axuda')
-		
+
 		elif sys.argv[1]=='-h':
 			print('axuda')
-		
+
 		else:
 			print(menu(sys.argv[1:]))
 	else:
